@@ -1,1 +1,1 @@
-DefineSite("example1","youtube",0,0,0,0);
+DefineSite("example1","https://www.youtube.com/watch?v=3sMkI7BluMQ",250,250,true,true);
