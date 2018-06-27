@@ -46,6 +46,7 @@ function YoutubeLink(domainID, url, height, width, border, screen) {
     document.getElementById(domainID).innerHTML = embed;
 }
 
+
 function TwitterLink(domainID, url) {
     var script = document.createElement('script');
     script.src = "https://platform.twitter.com/widgets.js";
