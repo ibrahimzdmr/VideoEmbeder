@@ -1,7 +1,7 @@
 function DefineSite(domainID, url) {
     var str = url.split(".");
     str.forEach(element => {
-        if (element === "youtube" || element === "youtu" || element === "https://youtube" || element === "https://youtu") {
+        if (element === "youtube"  || element === "youtu" || element === "https://youtube" || element === "https://youtu") {
             return YoutubeLink(domainID, url);
         }
     });
