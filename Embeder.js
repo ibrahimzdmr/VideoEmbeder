@@ -96,3 +96,7 @@ function VimeoLink(domainID, url, width, height, border, allowFullScreen) {
     embed += "></iframe>";
     document.getElementById(domainID).innerHTML = embed;
 }
+
+function FacebookLink(domainID,url,width,height,border,overflow,scrolling,frameborder,allowTransparency,allowFullScreen){
+    
+}
