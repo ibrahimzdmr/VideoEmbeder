@@ -99,8 +99,8 @@ function VimeoLink(domainID, url, width, height, border, allowFullScreen) {
 }
 
 function FacebookLink(domainID, url, width, height, style, scrolling, frameborder, allowFullScreen) {
-    width = width === undefined ? width : 999;
-    height = height === undefined ? height: 999;
+    width = width === undefined ? width : 560;
+    height = height === undefined ? height: 434;
     style = style === undefined ? style : "border:none;overflow:hidden";
     scrolling = scrolling === undefined ? scrolling : "no";
     frameborder = frameborder === undefined ? frameborder : "0";
@@ -109,23 +109,23 @@ function FacebookLink(domainID, url, width, height, style, scrolling, frameborde
     //
     
     var script = document.createElement("iframe");
-    script.width = width;
+    script.width = width
     script.height = height;
+    script.style.width = width;
+    script.style.height = height
     script.style = style;
     script.scrolling = scrolling;
     script.frameBorder = frameborder;
     script.allowFullscreen = allowFullScreen;
     var str = url.split("/");
     var link;
-
     for(var i = str.length-1; i > 0; i--){
         if(str[i] !== ""){
             link = str[i];
             break;
         }
     }
-    console.log(link);
-    script.src = "https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fi%2Fvideos%2F" + link + "&show_text=0&width=560";
+    script.src = "https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fi%2Fvideos%2F" + link;
     document.getElementById(domainID).appendChild(script);
 
 }
