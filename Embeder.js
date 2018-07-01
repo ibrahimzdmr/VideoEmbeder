@@ -153,7 +153,6 @@ function DailyMotionLink(domainID,url,width,height,frameborder,allowFullScreen){
             break;
         }
     }
-    console.log(link);
     script.src = "https://www.dailymotion.com/embed/video/" + link;
     document.getElementById(domainID).appendChild(script);
 }

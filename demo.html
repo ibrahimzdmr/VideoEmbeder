@@ -1,0 +1,47 @@
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm" style="background: wheat;   margin-top: 300px;">
+                <div class="media">
+                    <p id="video"></p>
+                </div>
+            </div>
+
+            <div class="col-sm" style="background:wheat; margin-top: 400px;">
+                <p style="font-size:30px">Example video URLs for demo</p>
+                <button onclick="">Youtube</button>
+                <button onclick="">Twitter</button>
+                <button onclick="">Facebook</button>
+                <button onclick="">Vimeo</button>
+                <button onclick="">Dailymotion</button>
+                <br>
+                <br>
+                Video URL:
+                <input id="inp" type="text" name="URL" size=40 value="https://www.youtube.com/watch?v=DjOXpbpPU-U">
+                <button onclick="Submit()">Submit</button>
+                <br>
+            </div>
+
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="Embeder.js"></script>
+    <script type="text/javascript" src="EmbederUsage.js"></script>
+    <script>
+        function Submit(){
+            DefineSite("video",document.getElementById("inp").value);
+        }
+        
+    </script>
+</body>
