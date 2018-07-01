@@ -17,6 +17,10 @@ function DefineSite(domainID, url) {
         if(element === "https://facebook" || element === "facebook")
         return FacebookLink(domainID,url);
     })
+    str.forEach(element => {
+        if(element === "dailymotion")
+        return DailyMotionLink(domainID,url);
+    })
 
 }
 
@@ -128,5 +132,28 @@ function FacebookLink(domainID, url, width, height, style, scrolling, frameborde
     }
     script.src = "https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fi%2Fvideos%2F" + link;
     document.getElementById(domainID).appendChild(script);
+}
 
+function DailyMotionLink(domainID,url,width,height,frameborder,allowFullScreen){
+    width = width === undefined ? 460 : width;
+    height = height === undefined ? 270: height;
+    frameborder = frameborder === undefined ? "0" : frameborder;
+    allowFullScreen = allowFullScreen === undefined ? true : allowFullScreen;
+    //
+    var script = document.createElement("iframe");
+    script.width = width;
+    script.height = height;
+    script.frameBorder = frameborder;
+    script.allowFullscreen = allowFullScreen;
+    var str = url.split("/");
+    var link;
+    for(var i = 0; i < str.length; i++){
+        if(str[i] === "video"){
+            link = str[i+1];
+            break;
+        }
+    }
+    console.log(link);
+    script.src = "https://www.dailymotion.com/embed/video/" + link;
+    document.getElementById(domainID).appendChild(script);
 }
