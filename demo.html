@@ -15,11 +15,11 @@
 
             <div class="col-sm" style="background:wheat; margin-top: 400px;">
                 <p style="font-size:30px">Example video URLs for demo</p>
-                <button onclick="">Youtube</button>
-                <button onclick="">Twitter</button>
-                <button onclick="">Facebook</button>
-                <button onclick="">Vimeo</button>
-                <button onclick="">Dailymotion</button>
+                <button onclick="YoutubeExample()">Youtube</button>
+                <button onclick="TwitterExample()">Twitter</button>
+                <button onclick="FacebookExample()">Facebook</button>
+                <button onclick="VimeoExample()">Vimeo</button>
+                <button onclick="DailymotionExample()">Dailymotion</button>
                 <br>
                 <br>
                 Video URL:
@@ -42,6 +42,20 @@
         function Submit(){
             DefineSite("video",document.getElementById("inp").value);
         }
-        
+        function YoutubeExample(){
+            document.getElementById("inp").value = "https://www.youtube.com/watch?v=DjOXpbpPU-U";
+        }
+        function TwitterExample(){
+            document.getElementById("inp").value = "https://twitter.com/FIFAcom/status/1007242892954554370";
+        }
+        function FacebookExample(){
+            document.getElementById("inp").value = "https://www.facebook.com/Amazon/videos/10156068881468124/";
+        }
+        function VimeoExample(){
+            document.getElementById("inp").value = "https://vimeo.com/259539583";
+        }
+        function DailymotionExample(){
+            document.getElementById("inp").value = "https://www.dailymotion.com/video/x51ifmb";
+        }
     </script>
 </body>

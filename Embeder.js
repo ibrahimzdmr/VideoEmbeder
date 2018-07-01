@@ -76,8 +76,8 @@ function TwitterLink(domainID, url) {
 
 
 function VimeoLink(domainID, url, width, height, border, allowFullScreen) {
-    height = height === undefined ? 360 : height;
-    width = width === undefined ? 640 : width;
+    height = height === undefined ? 300 : height;
+    width = width === undefined ? 520 : width;
     border = border === undefined ? false : border;
     allowFullScreen = allowFullScreen === undefined ? true : allowFullScreen;
     var screen = "";
@@ -131,6 +131,7 @@ function FacebookLink(domainID, url, width, height, style, scrolling, frameborde
         }
     }
     script.src = "https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fi%2Fvideos%2F" + link;
+    document.getElementById(domainID).innerHTML = "";
     document.getElementById(domainID).appendChild(script);
 }
 
@@ -154,5 +155,6 @@ function DailyMotionLink(domainID,url,width,height,frameborder,allowFullScreen){
         }
     }
     script.src = "https://www.dailymotion.com/embed/video/" + link;
+    document.getElementById(domainID).innerHTML = "";
     document.getElementById(domainID).appendChild(script);
 }
