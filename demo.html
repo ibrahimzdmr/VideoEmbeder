@@ -15,17 +15,19 @@
 
             <div class="col-sm" style="background:wheat; margin-top: 400px;">
                 <p style="font-size:30px">Example video URLs for demo</p>
-                <button onclick="YoutubeExample()">Youtube</button>
-                <button onclick="TwitterExample()">Twitter</button>
-                <button onclick="FacebookExample()">Facebook</button>
-                <button onclick="VimeoExample()">Vimeo</button>
-                <button onclick="DailymotionExample()">Dailymotion</button>
+                <button class="btn btn-info" onclick="YoutubeExample()">Youtube</button>
+                <button class="btn btn-info" onclick="TwitterExample()">Twitter</button>
+                <button class="btn btn-info" onclick="FacebookExample()">Facebook</button>
+                <button class="btn btn-info" onclick="VimeoExample()">Vimeo</button>
+                <button class="btn btn-info" onclick="DailymotionExample()">Dailymotion</button>
                 <br>
                 <br>
+                <div class="form-inline">
                 Video URL:
-                <input id="inp" type="text" name="URL" size=40 value="https://www.youtube.com/watch?v=DjOXpbpPU-U">
-                <button onclick="Submit()">Submit</button>
+                <input class="form-control" id="inp" type="text" name="URL" size=40 value="https://www.youtube.com/watch?v=DjOXpbpPU-U">
+                <button class="btn btn-warning" onclick="Submit()">Submit</button>
                 <br>
+            </div>
             </div>
 
         </div>
@@ -37,7 +39,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
         crossorigin="anonymous"></script>
     <script type="text/javascript" src="Embeder.js"></script>
-    <script type="text/javascript" src="EmbederUsage.js"></script>
     <script>
         function Submit(){
             DefineSite("video",document.getElementById("inp").value);
