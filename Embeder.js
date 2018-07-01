@@ -6,12 +6,16 @@ function DefineSite(domainID, url) {
         }
     });
     str.forEach(element => {
-        if (element === "https://twitter")
+        if (element === "https://twitter" || element === "twitter")
             return TwitterLink(domainID, url);
     });
     str.forEach(element => {
         if (element === "vimeo" || element === "https://vimeo")
             return VimeoLink(domainID, url);
+    })
+    str.forEach(element => {
+        if(element === "https://facebook" || element === "facebook")
+        return FacebookLink(domainID,url);
     })
 
 }
@@ -99,20 +103,17 @@ function VimeoLink(domainID, url, width, height, border, allowFullScreen) {
 }
 
 function FacebookLink(domainID, url, width, height, style, scrolling, frameborder, allowFullScreen) {
-    width = width === undefined ? width : 560;
-    height = height === undefined ? height: 434;
-    style = style === undefined ? style : "border:none;overflow:hidden";
-    scrolling = scrolling === undefined ? scrolling : "no";
-    frameborder = frameborder === undefined ? frameborder : "0";
-    //allowTransparency = allowTransparency === undefined ? allowTransparency : "true";
-    allowFullScreen = allowFullScreen === undefined ? allowFullScreen : "true";
+    width = width === undefined ? 560 : width;
+    height = height === undefined ? 434: height;
+    style = style === undefined ? "border:none;overflow:hidden" : style;
+    scrolling = scrolling === undefined ? "no" : scrolling;
+    frameborder = frameborder === undefined ? "0" : frameborder;
+    allowFullScreen = allowFullScreen === undefined ? true : allowFullScreen;
     //
     
     var script = document.createElement("iframe");
-    script.width = width
+    script.width = width;
     script.height = height;
-    script.style.width = width;
-    script.style.height = height
     script.style = style;
     script.scrolling = scrolling;
     script.frameBorder = frameborder;
