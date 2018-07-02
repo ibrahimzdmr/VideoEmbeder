@@ -2,6 +2,10 @@
 //Therefore you could easily use API by calling exact site embed video just like codes down below
 //You could easily give the paramaters that you want to interact with.
 
+//**********************************************************
+
+//@DomainID = ID which embed video will shown.
+//@Url = 
 
 
 YoutubeLink("YoutubeExample","https://www.youtube.com/watch?v=UF8uR6Z6KLc",700,900,false,true);
