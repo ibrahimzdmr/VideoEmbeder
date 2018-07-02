@@ -1,4 +1,6 @@
-//Clearly you could use DefineSite function but that function doesn't contain all features of 
+//Clearly you could use DefineSite function but that function doesn't contain all features of embed video on that site.
+//Therefore you could easily use API by calling exact site embed video just like codes down below
+//You could easily give the paramaters that you want to interact with.
 
 
 
