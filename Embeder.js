@@ -78,7 +78,7 @@ function TwitterLink(domainID, url) {
 function VimeoLink(domainID, url, width, height, border, allowFullScreen) {
     height = height === undefined ? 300 : height;
     width = width === undefined ? 520 : width;
-    border = border === undefined ? false : border;
+    border = border === undefined ? 0 : border;
     allowFullScreen = allowFullScreen === undefined ? true : allowFullScreen;
     var screen = "";
     if (border === false)
