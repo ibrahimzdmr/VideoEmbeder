@@ -3,11 +3,12 @@ Embeder is a API that helps embed videos into your site easily. I tried to solve
 
 
 ## Supporting Sites
--Youtube
--Vimeo
--Twitter
--Facebook
--Dailymotion
+
+1. Youtube
+2. Vimeo
+3. Twitter
+4. Facebook
+5. Dailymotion
 
 # Usage
 
