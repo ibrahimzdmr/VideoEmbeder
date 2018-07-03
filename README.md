@@ -1,6 +1,27 @@
 # Overview
 Embeder is a API that helps embed videos into your site easily. I tried to solve a problem from another API and later on I thought I should create an API for this job.
 
+
+##Supporting Sites
+-Youtube
+-Vimeo
+-Twitter
+-Facebook
+-Dailymotion
+
+# Usage
+
+## Basic Use
+You could easily use embeder with only one function.
 ```javascript
 DefineSite(DomainID, VideoLink);
+```
+
+##Specific Use
+Beside the basic use you could specifically use functions to benefits that site embed features.
+```javascript
+YoutubeLink(DomainID, VideoLink, Height, Width, Frameborder, AllowFullScreen)
+VimeoLink(DomainID, VideoLink, Width, Height, Frameborder, AllowFullScreen)
+FacebookLink(DomainID, VideoLink, Width, Height, Style, Scrolling, Frameborder, AllowFullScreen)
+DailyMotionLink(DomainID, VideoLink, Width, Height, Frameborder, AllowFullScreen)
 ```
