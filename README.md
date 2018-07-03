@@ -18,11 +18,17 @@ You could easily use embeder with only one function.
 DefineSite(DomainID, VideoLink);
 ```
 
-##Specific Use
+## Specific Use
 Beside the basic use you could specifically use functions to benefits that site embed features.
 ```javascript
 YoutubeLink(DomainID, VideoLink, Height, Width, Frameborder, AllowFullScreen)
 VimeoLink(DomainID, VideoLink, Width, Height, Frameborder, AllowFullScreen)
 FacebookLink(DomainID, VideoLink, Width, Height, Style, Scrolling, Frameborder, AllowFullScreen)
 DailyMotionLink(DomainID, VideoLink, Width, Height, Frameborder, AllowFullScreen)
+```
+
+## Import
+You could easily import Embeder to your code by adding this code to your html page.
+```html
+<script type="text/javascript" src="Embeder.js"></script>
 ```

@@ -8,6 +8,7 @@
 //@Url = Video url, make sure that you don't use any site other than Twitter, Facebook, Youtube, Vimeo, Dailymotion.
 //@frameborder/border = This feature draw a strict line around the video. You can give 0/1 value to this one unless you are using vimeo, that take true or false.
 
+
 //********************************* Example codes are below
 
 
