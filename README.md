@@ -1,5 +1,5 @@
 # Overview
-Embeder is a API that helps embed videos into your site easily. I tried to solve a problem from another API and later on I thought I should create an API for this job.
+Embeder is a API that helps put embed videos into your site easily. I tried to solve a problem from another API and later on I thought I should create an API for this job.
 
 
 ## Supporting Sites
@@ -12,10 +12,22 @@ Embeder is a API that helps embed videos into your site easily. I tried to solve
 
 # Usage
 
+## Import
+You could easily import Embeder to your code by adding this code to end of your html page.
+```html
+<script type="text/javascript" src="Embeder.js"></script>
+```
+
 ## Basic Use
 You could easily use embeder with only one function.
 ```javascript
 DefineSite(DomainID, VideoLink);
+```
+
+### DomainID
+DomainID takes the id of an html element and replace it with the video.
+```html
+<p id="Example1"><p>
 ```
 
 ## Specific Use
@@ -25,10 +37,4 @@ YoutubeLink(DomainID, VideoLink, Height, Width, Frameborder, AllowFullScreen)
 VimeoLink(DomainID, VideoLink, Width, Height, Frameborder, AllowFullScreen)
 FacebookLink(DomainID, VideoLink, Width, Height, Style, Scrolling, Frameborder, AllowFullScreen)
 DailyMotionLink(DomainID, VideoLink, Width, Height, Frameborder, AllowFullScreen)
-```
-
-## Import
-You could easily import Embeder to your code by adding this code to your html page.
-```html
-<script type="text/javascript" src="Embeder.js"></script>
 ```
