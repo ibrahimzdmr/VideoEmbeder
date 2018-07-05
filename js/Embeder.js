@@ -88,22 +88,16 @@ function VimeoLink(domainID, url, width, height, border, allowFullScreen) {
     if (allowFullScreen === true)
         screen = "webkitallowfullscreen mozallowfullscreen allowfullscreen";
     // 
-    var embed = "<iframe src=\"https://player.vimeo.com/video/";
     var str = url.split("/");
     var link = str[str.length - 1];
-    //link
-    embed += link;
-    //width
-    embed += "\" width=\"" + width + "\"";
-    //height
-    embed += " height=\"" + height + "\"";
-    // frameborder
-    embed += " frameborder=\"" + border + "\"";
-    // allowfullscreen
-    embed += screen;
-    embed += "></iframe>";
-    document.getElementById(domainID).innerHTML = embed;
-
+    var script = document.createElement("iframe");
+    script.src = "\"https://player.vimeo.com/video/" + link;
+    script.width = width;
+    script.height = height;
+    script.border = border;
+    script.allowFullscreen = allowFullScreen === true ? "webkitallowfullscreen mozallowfullscreen allowfullscreen" : allowFullScreen;
+    document.getElementById(domainID).innerHTML = "";
+    document.getElementById(domainID).appendChild = script;
 }
 
 function FacebookLink(domainID, url, width, height, style, scrolling, frameborder, allowFullScreen) {
