@@ -32,6 +32,7 @@ DomainID takes the id of an html element and replace it with the video.
 
 ## Specific Use
 Beside the basic use you could specifically use functions to benefits that site embed features.
+
 ```javascript
 YoutubeLink(DomainID, VideoLink, Height, Width, Frameborder, AllowFullScreen)
 VimeoLink(DomainID, VideoLink, Width, Height, Frameborder, AllowFullScreen)
