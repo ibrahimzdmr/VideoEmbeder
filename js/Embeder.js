@@ -84,13 +84,13 @@ function VimeoLink(domainID, url, width, height, border, allowFullScreen) {
     var str = url.split("/");
     var link = str[str.length - 1];
     var script = document.createElement("iframe");
-    script.src = "\"https://player.vimeo.com/video/" + link;
+    script.src = "https://player.vimeo.com/video/" + link;
     script.width = width;
     script.height = height;
     script.border = border;
     script.allowFullscreen = allowFullScreen === true ? "webkitallowfullscreen mozallowfullscreen allowfullscreen" : allowFullScreen;
     document.getElementById(domainID).innerHTML = "";
-    document.getElementById(domainID).appendChild = script;
+    document.getElementById(domainID).appendChild(script);
 }
 
 function FacebookLink(domainID, url, width, height, style, scrolling, frameborder, allowFullScreen) {
