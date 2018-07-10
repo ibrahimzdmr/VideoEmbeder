@@ -38,24 +38,16 @@ function YoutubeLink(domainID, url, height, width, border, allowFullScreen) {
     if (allowFullScreen === true)
         screen = "allowfullscreen";
     // 
-    var embed = "<iframe";
     var str = url.split("=");
     var link = str[str.length - 1];
-    //width
-    embed += " width=\"" + width + "\"";
-    //height
-    embed += " height=\"" + height + "\"";
-    //link
-    embed += " src=\"https://www.youtube.com/embed/" + link + "\"";
-    //border
-    embed += " frameborder=\"" + border + "\"";
-    //autoplay etc
-    embed += " allow=\"autoplay; encrypted-media\"";
-    //fullscreen
-    embed += screen;
-    //end of the frame
-    embed += "></iframe>";
-    document.getElementById(domainID).innerHTML = embed;
+    var embed = document.createElement("iframe");
+    embed.width = width;
+    embed.height = height;
+    embed.src = "https://www.youtube.com/embed/" + link;
+    embed.frameBorder = border;
+    embed.allowFullscreen = allowFullScreen;
+    document.getElementById(domainID).innerHTML = "";
+    document.getElementById(domainID).appendChild(embed);
 }
 
 
@@ -66,12 +58,13 @@ function TwitterLink(domainID, url) {
     script.charset = "utf-8"
     document.head.appendChild(script);
 
-    var embed = "<blockquote class=\"twitter-tweet\"><a href=\"https://twitter.com/i/status/";
+    var embed = document.createElement("blockquote");
     var str = url.split("/");
     var link = str[str.length - 1];
-    embed += link;
-    embed += "?ref_src=twsrc%5Etfw\"></a></blockquote>";
-    document.getElementById(domainID).innerHTML = embed;
+    embed.className = "twitter-tweet";
+    embed.src = "https://twitter.com/i/status/" + link + "?ref_src=twsrc%5Etfw";
+    document.getElementById(domainID).innerHTML = "";
+    document.getElementById(domainID).appendChild(embed);
 }
 
 
