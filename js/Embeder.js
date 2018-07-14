@@ -58,13 +58,12 @@ function TwitterLink(domainID, url) {
     script.charset = "utf-8"
     document.head.appendChild(script);
 
-    var embed = document.createElement("blockquote");
+    var embed = "<blockquote class=\"twitter-tweet\"><a href=\"https://twitter.com/i/status/";
     var str = url.split("/");
     var link = str[str.length - 1];
-    embed.className = "twitter-tweet";
-    embed.src = "https://twitter.com/i/status/" + link + "?ref_src=twsrc%5Etfw";
-    document.getElementById(domainID).innerHTML = "";
-    document.getElementById(domainID).appendChild(embed);
+    embed += link;
+    embed += "?ref_src=twsrc%5Etfw\"></a></blockquote>";
+    document.getElementById(domainID).innerHTML = embed;
 }
 
 
