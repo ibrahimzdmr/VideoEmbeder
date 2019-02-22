@@ -8,7 +8,6 @@ Embeder is a API that helps put embed videos into your site easily. I tried to s
 2. Vimeo
 3. Twitter
 4. Facebook
-5. Dailymotion
 
 # Usage
 
@@ -21,7 +20,7 @@ You could easily import Embeder to your code by adding this code to end of your 
 ## Basic Use
 You could easily use embeder with only one function.
 ```javascript
-DefineSite(DomainID, VideoLink);
+DefineSite(DomainID, VideoLink,Height,Width);
 ```
 
 ### DomainID
